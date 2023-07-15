@@ -1,0 +1,245 @@
+{
+	"info": {
+		"_postman_id": "9fd1a0cf-5d51-4995-8036-fba0c91e9237",
+		"name": "ChatBackend",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json",
+		"_exporter_id": "19033461"
+	},
+	"item": [
+		{
+			"name": "SendMessage",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": {
+						"token": "YjFIhYG8L4jQloaodwzxE7xRhhc5EJS7bHJmWgai"
+					}
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "message",
+							"value": "Hellowqe",
+							"type": "text"
+						},
+						{
+							"key": "to",
+							"value": "omar2",
+							"type": "text"
+						}
+					]
+				},
+				"url": "{{url}}SendMessage"
+			},
+			"response": []
+		},
+		{
+			"name": "fetch_messgae",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "name",
+							"value": "",
+							"type": "text"
+						},
+						{
+							"key": "password",
+							"value": "",
+							"type": "text"
+						}
+					]
+				},
+				"url": "{{url}}login"
+			},
+			"response": []
+		},
+		{
+			"name": "register",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "name",
+							"value": "omar2",
+							"type": "text"
+						},
+						{
+							"key": "email",
+							"value": "omar@gmail.com",
+							"type": "text"
+						},
+						{
+							"key": "password",
+							"value": "123456789",
+							"type": "text"
+						}
+					]
+				},
+				"url": "{{url}}register"
+			},
+			"response": []
+		},
+		{
+			"name": "login",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "name",
+							"value": "omar2",
+							"type": "text"
+						},
+						{
+							"key": "password",
+							"value": "123456789",
+							"type": "text"
+						}
+					]
+				},
+				"url": "{{url}}login"
+			},
+			"response": []
+		},
+		{
+			"name": "createChat",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": {
+						"token": "7y0xPi8h4xF2d1uflDk8UrrPiOQKMxAqM4egliCq"
+					}
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": []
+				},
+				"url": "{{url}}createChat"
+			},
+			"response": []
+		},
+		{
+			"name": "load",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": {
+						"token": "IlO7wBWeaNbMWrxGEvgeMHNyU0pi8wKrKbu6EXW4"
+					}
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "chat_id",
+							"value": "50",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "{{url}}load?chat_id=50",
+					"host": [
+						"{{url}}load"
+					],
+					"query": [
+						{
+							"key": "chat_id",
+							"value": "50"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "loadWith Scrolling",
+			"request": {
+				"method": "GET",
+				"header": []
+			},
+			"response": []
+		},
+		{
+			"name": "load2",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": {
+						"token": "wGiQfTkqs82d3iKxqj85jHkf4Po7JeLPWByXx3oe"
+					}
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{url}}load?other=3",
+					"host": [
+						"{{url}}load"
+					],
+					"query": [
+						{
+							"key": "other",
+							"value": "3"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
